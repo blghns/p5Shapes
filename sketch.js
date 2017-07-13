@@ -13,6 +13,10 @@ function windowResized() {
 
 function draw() {
   // mobile
+  if (mouseIsPressed && (mouseButton === LEFT) && touches.length === 0) {
+    var s = new shape([mouseX, mouseY]);
+    shapes.push(s);
+  }
   if (touches.length > 0) {
     var s = new shape(touches);
     shapes.push(s);
